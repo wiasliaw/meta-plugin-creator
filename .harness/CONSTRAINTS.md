@@ -47,3 +47,9 @@
 - **Rule**: A `SKILL.md` MUST NOT exceed 500 lines; overflow MUST be split into reference files.
 - **Source**: User-declared — hard backstop against context bloat, complements C-001.
 - **Applicability**: Every `SKILL.md` in this plugin and in produced plugins.
+
+## C-009: Bilingual README sync
+
+- **Rule**: Any content change to `README.md` MUST be mirrored in `README.zh-TW.md` (and vice versa) within the same work unit, preserving identical heading structure; code blocks, commands, paths, and identifiers MUST remain English in both files.
+- **Source**: User-declared — bilingual README delivered as two synchronized files (D-005).
+- **Applicability**: Every work unit that touches either README file.

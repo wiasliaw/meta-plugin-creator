@@ -23,3 +23,9 @@
 - **Decision**: A plugin's cross-step working state lives in `.<plugin-name>/` at the target repo root — for this plugin, `.meta-plugin-creator/plan.md`. The path is a default; the user may override it in conversation. Resume checks the default location first and asks if absent.
 - **Rationale**: Name collision safety across plugins and clear ownership of state files; a stable default makes resume and outside inspection mechanical (C-002).
 - **Rejected**: A generic shared directory name (e.g. `.plugin-dev/`) — collides when multiple plugins operate on one repo and obscures which tool owns the state.
+
+## D-005 (2026-08-06): Bilingual README as two synchronized files, English canonical
+
+- **Decision**: The repo README ships as `README.md` (English, canonical) plus `README.zh-TW.md` (Traditional Chinese, full synchronized translation): same heading structure, cross-language links near the top, code/commands/identifiers in English in both. Heading-count parity is the executable sync proxy.
+- **Rationale**: Owner requested bilingual docs; keeping the English `README.md` canonical preserves the C-007 English-docs convention while the zh-TW file serves the owner's audience.
+- **Rejected**: English-only README (ignores the owner's request); one mixed-language file (harder to read and keep in sync); zh-TW as the canonical file (breaks the C-007 docs convention).
