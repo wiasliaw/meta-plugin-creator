@@ -3,9 +3,9 @@
 ## Module Map
 
 - `.claude-plugin/` — plugin manifest (`plugin.json`): name, version, metadata. (planned — not yet built)
-- `skills/` — skill content; each skill is a `SKILL.md` entry point plus `references/` detail files. (planned)
-- `commands/` — slash-command entry points; thin wrappers that load a skill. (planned)
-- `agents/` — sub-agent definitions used to delegate heavy work out of the main context. (planned)
+- `skills/` — skill content; each skill is a `SKILL.md` entry point plus `references/` detail files. Currently ships `plugin-dev`, the core plugin-authoring skill (router SKILL.md + seven references).
+- `commands/` — slash-command entry points; thin wrappers that load a skill. (planned — none yet; the core skill ships without wrappers per D-002)
+- `agents/` — sub-agent definitions used to delegate heavy work out of the main context. (planned — none yet; delegation uses general-purpose sub-agents with briefs per D-003)
 - `.harness/` — long-term memory: architecture, constraints, decisions, verified features, archived specs.
 - `.project/` — short-term memory: in-flight sprint-contracts and the session handoff file.
 
