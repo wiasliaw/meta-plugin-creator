@@ -1,0 +1,10 @@
+{
+  "name": "meta-plugin-creator",
+  "version": "0.0.0",
+  "description": "A claude-plugin that creates claude-plugins satisfying progressive disclosure, state externalization, delegation, worktree compatibility, and down-tier model support",
+  "author": {
+    "name": "wiasliaw",
+    "email": "wiasliaw@protonmail.com"
+  },
+  "skills": []
+}

@@ -1,0 +1,16 @@
+# Dependencies
+node_modules/
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+
+# Claude Code local session state (shared settings, if added later, stay tracked)
+.claude/settings.local.json
+.claude/.cc-writes/
+
+# Short-term memory: in-flight contracts and session handoff are disposable;
+# long-term memory lives in git-tracked .harness/ (finalized specs in .harness/spec/)
+.project/

@@ -1,0 +1,15 @@
+{
+  "name": "meta-plugin-creator",
+  "owner": {
+    "name": "wiasliaw",
+    "email": "wiasliaw@protonmail.com"
+  },
+  "description": "meta-plugin-creator as its own single-plugin marketplace.",
+  "plugins": [
+    {
+      "name": "meta-plugin-creator",
+      "source": "./",
+      "description": "A claude-plugin that creates claude-plugins satisfying progressive disclosure, state externalization, delegation, worktree compatibility, and down-tier model support."
+    }
+  ]
+}
