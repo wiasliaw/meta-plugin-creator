@@ -49,3 +49,7 @@ Run from the repo root; all must pass:
 - No version bump or release execution — only the changeset file; the release PR handles versioning.
 - No CI additions (e.g. no README-sync check workflow).
 - No badges that depend on services not already in use.
+
+---
+
+**Progress note (2026-08-06, orchestrator)**: Post-review scope amendment by the owner — no version release for this work unit. The changeset entry (`.changeset/readme-bilingual.md`) was removed after the reviewer pass, and verification standard 6 (changeset exists) is void. Standards 1–5 remain as verified.
