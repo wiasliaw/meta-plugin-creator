@@ -10,3 +10,14 @@
   4. `for f in skills/plugin-dev/references/*.md; do grep -rqF "references/$(basename "$f")" skills/plugin-dev/SKILL.md skills/plugin-dev/references/ --include='*.md' || echo "UNREFERENCED: $f"; done` — no output
   5. `ls skills/plugin-dev/references/` — exactly the seven declared reference files
 - **Evidence**: Reviewer pass verdict 2026-08-06. All five commands re-executed independently by the reviewer: validate exit 0, SKILL.md 140 lines (≤ 500), whitelist entry present, no unreferenced reference files, seven files exact. All five reviewer dimensions scored clean with quoted evidence; all Exclusions respected. Work unit: plugin-dev-core-skill.
+
+## F-002: Bilingual README (en / zh-TW)
+
+- **Behavior**: Repo root ships `README.md` (English, canonical) and `README.zh-TW.md` (Traditional Chinese, synchronized translation): cross-language links near the top, identical 9-heading structure, covering what the plugin is (the five authoring standards), marketplace installation (`wiasliaw/meta-plugin-creator` as its own single-plugin marketplace; install id `meta-plugin-creator@meta-plugin-creator`), `plugin-dev` usage (init/extend modes, `.meta-plugin-creator/plan.md` state file), repo-structure pointer, development toolchain/release flow, and MIT license. Code blocks, commands, paths, and identifiers stay English in both files.
+- **Verification**:
+  1. `claude plugin validate --strict .` — exit 0
+  2. `test -f README.md && test -f README.zh-TW.md && echo OK` — prints OK
+  3. `grep -q 'README\.zh-TW\.md' README.md && grep -q 'README\.md' README.zh-TW.md && echo OK` — prints OK
+  4. `test "$(grep -c '^#' README.md)" -eq "$(grep -c '^#' README.zh-TW.md)" && echo OK` — prints OK
+  5. `grep -qF 'wiasliaw/meta-plugin-creator' README.md && grep -qF 'wiasliaw/meta-plugin-creator' README.zh-TW.md && echo OK` — prints OK
+- **Evidence**: Reviewer pass verdict 2026-08-06. All contract commands re-executed independently by the reviewer and passed (validate exit 0; 9/9 headings in matching order; cross-links and repo references present). Content coverage, bilingual sync (zero Simplified-only characters), factual accuracy (license, skill modes, state path, toolchain, install ids all traced to source files), and exclusions all scored clean with quoted evidence. Post-review scope amendment (owner, 2026-08-06): the originally contracted changeset entry was dropped — docs-only PR, no version bump; the changeset verification standard was removed accordingly. Work unit: readme-bilingual.
